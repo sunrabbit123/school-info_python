@@ -1,2 +1,2 @@
-__name__ = 'school-info'
-__author__ = 'sunrabbit123'
+__name__ = "school-info"
+__author__ = "sunrabbit123"
