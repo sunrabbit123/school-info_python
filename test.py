@@ -20,6 +20,19 @@ async def main():
 
     print(schedule_data, end="\n\n\n\n\n")
 
+    major_data: dict = await schoolInfo.major(
+        ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+        SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"],
+    )
+
+    print(major_data, end="\n\n\n\n\n")
+
+    class_data: dict = await schoolInfo.classes(
+        ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+        SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"],
+    )
+
+    print(class_data, end="\n\n\n\n\n")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()

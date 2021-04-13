@@ -19,6 +19,7 @@ class HTMLGetter:
         self.headers = headers
 
     async def get_html(self, url: str):
+        print(url)
         async with aiohttp.ClientSession() as cs:
             html = await cs.get(url, headers=self.headers)
             return await html.text()
