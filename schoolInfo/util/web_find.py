@@ -28,12 +28,3 @@ class HTMLGetter:
         data = BeautifulSoup(html, "html.parser")
         jsonData = json.loads(data.get_text())
         return jsonData
-
-
-if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(
-        HTMLGetter().get_json(
-            "https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=T10&SD_SCHUL_CODE=9296071"
-        )
-    )
