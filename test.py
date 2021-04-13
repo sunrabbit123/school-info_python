@@ -13,6 +13,13 @@ async def main():
     )
     print(meal_data, end="\n\n\n\n\n")
 
+    schedule_data: dict = await schoolInfo.schedule(
+        ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+        SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"],
+    )
+
+    print(schedule_data, end="\n\n\n\n\n")
+
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
