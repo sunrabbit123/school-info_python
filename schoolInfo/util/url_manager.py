@@ -9,11 +9,16 @@ class url_manager:
     ):
         option_list: list = [f"pIndex={pIndex}", f"pSize={pSize}"]
         option: str = "&".join(option_list)
-        addition_str = "&".join(additions)
+
+        try:
+            addition_str = "&" + "&".join(additions)
+        except TypeError:
+            addition_str = ""
+
         self.url = (
             f"https://open.neis.go.kr/hub/{type}?Type=json&{option}"
             + ("" if auth_key is None else auth_key)
-            + f"&{addition_str}"
+            + f"{addition_str}"
         )
 
     def get_url(self):
