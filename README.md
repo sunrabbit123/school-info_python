@@ -1,2 +1,3 @@
-# school-info_python
-Neis API 기반으로 학교 관련된 API를 사용하기 쉽게 핸들링해주는 모듈입니다.
+# SchoolInfo
+
+`Neis API` 기반으로 학교 정보, 급식 정보, 반 정보, 시간표 정보 등 제공 서비스
