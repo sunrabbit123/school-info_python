@@ -9,7 +9,8 @@ setup(name='schoolInfo',
       packages=find_packages(exclude=['tests']), 
       long_description=open('README.md', encoding='UTF-8').read(),
       long_description_content_type='text/markdown',
-      install_requires=['cython'],
+      install_requires=["aiohttp", "asyncio"],
+      python_requires=">=3.6",
       zip_safe=False,
       classifiers=[
           'License :: OSI Approved :: MIT License'
