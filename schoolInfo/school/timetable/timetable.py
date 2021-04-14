@@ -3,7 +3,12 @@ import asyncio
 import schoolInfo.util as util
 
 
-async def timetable(ATPT_OFCDC_SC_CODE: str, SD_SCHUL_CODE: str, SCHUL_KND_SC_NM: str, auth_key : str = None):
+async def timetable(
+    ATPT_OFCDC_SC_CODE: str,
+    SD_SCHUL_CODE: str,
+    SCHUL_KND_SC_NM: str,
+    auth_key: str = None,
+):
     school_type: dict = {
         "초등학교": "elsTimetable",
         "중학교": "misTimetable",
