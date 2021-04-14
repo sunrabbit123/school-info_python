@@ -9,7 +9,7 @@ setup(name='schoolInfo',
       packages=find_packages(exclude=['tests']), 
       long_description=open('README.md', encoding='UTF-8').read(),
       long_description_content_type='text/markdown',
-      install_requires=["aiohttp", "asyncio"],
+      install_requires=["aiohttp", "asyncio", "pytz"],
       python_requires=">=3.6",
       zip_safe=False,
       classifiers=[
