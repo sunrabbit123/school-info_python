@@ -167,6 +167,65 @@ print(meal_data)
 ]
 ```
 
+### 일정 관련 정보
 
+```python
+school_data : dict = await schoolInfo.search("광주소프트웨어마이스터고등학교")
+schedule_data : dict = await schoolInfo.schedule(
+    ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+    SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"]
+)
+print(schedule_data)
+```
+
+**결과값**
+
+```json
+[
+   {
+      "ATPT_OFCDC_SC_CODE":"F10",
+      "ATPT_OFCDC_SC_NM":"광주광역시교육청",
+      "SD_SCHUL_CODE":"7380292",
+      "SCHUL_NM":"광주소프트웨어마이스터고등학교",
+      "AY":"2020",
+      "DGHT_CRSE_SC_NM":"주간",
+      "SCHUL_CRSE_SC_NM":"고등학교",
+      "SBTR_DD_SC_NM":"공휴일",
+      "AA_YMD":"20200301",
+      "EVENT_NM":"3・1절",
+      "EVENT_CNTNT":"None",
+      "ONE_GRADE_EVENT_YN":"Y",
+      "TW_GRADE_EVENT_YN":"Y",
+      "THREE_GRADE_EVENT_YN":"Y",
+      "FR_GRADE_EVENT_YN":"*",
+      "FIV_GRADE_EVENT_YN":"*",
+      "SIX_GRADE_EVENT_YN":"*",
+      "LOAD_DTM":"20210414004454"
+   },
+   .
+   .
+   .
+   {
+      "ATPT_OFCDC_SC_CODE":"F10",
+      "ATPT_OFCDC_SC_NM":"광주광역시교육청",
+      "SD_SCHUL_CODE":"7380292",
+      "SCHUL_NM":"광주소프트웨어마이스터고등학교",
+      "AY":"2020",
+      "DGHT_CRSE_SC_NM":"주간",
+      "SCHUL_CRSE_SC_NM":"고등학교",
+      "SBTR_DD_SC_NM":"휴업일",
+      "AA_YMD":"20200305",
+      "EVENT_NM":"코로나-19 휴업일",
+      "EVENT_CNTNT":"None",
+      "ONE_GRADE_EVENT_YN":"Y",
+      "TW_GRADE_EVENT_YN":"Y",
+      "THREE_GRADE_EVENT_YN":"Y",
+      "FR_GRADE_EVENT_YN":"*",
+      "FIV_GRADE_EVENT_YN":"*",
+      "SIX_GRADE_EVENT_YN":"*",
+      "LOAD_DTM":"20210414004454"
+   }
+]
+```
 
 
