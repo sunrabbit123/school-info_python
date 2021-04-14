@@ -81,7 +81,7 @@ print(school_data)
 2. auth_key : [https://open.neis.go.kr/portal/guide/actKeyPage.do](https://open.neis.go.kr/portal/guide/actKeyPage.do)
     - Neis API의 인증키값입니다.
 
-```json
+```js
 {
    "ATPT_OFCDC_SC_CODE":"F10", // 시도 교육청 코드
    "ATPT_OFCDC_SC_NM":"광주광역시교육청", // 시도교육청 명
@@ -127,7 +127,7 @@ print(meal_data)
 
 **결과값**
 
-```json
+```js
 [
    {
       "ATPT_OFCDC_SC_CODE":"F10", // 시도교육청 코드
@@ -180,7 +180,7 @@ print(schedule_data)
 
 **결과값**
 
-```json
+```js
 [
    {
       "ATPT_OFCDC_SC_CODE":"F10",
