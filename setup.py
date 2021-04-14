@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="schoolInfo",
-    version="1.0.0",
+    version="1.0.1",
     url="https://github.com/sunrabbit123/school-info_python",
     author="sunrabbit123",
     author_email="qudwls185@naver.com",
