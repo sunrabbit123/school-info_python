@@ -319,3 +319,47 @@ print(timetable_data)
     } ...
 ]
 ```
+
+### 반 정보 출력
+
+```python
+school_data : dict = await schoolInfo.search("광주소프트웨어마이스터고등학교")
+class_data : dict = await schoolInfo.classes(
+    ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+    SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"]
+)
+print(class_data)
+```
+
+**결과값**
+
+```js
+[
+    {
+        'ATPT_OFCDC_SC_CODE': 'F10',
+        'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+        'SD_SCHUL_CODE': '7380292',
+        'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+        'AY': '2020',
+        'GRADE': '1',
+        'DGHT_CRSE_SC_NM': '주간',
+        'SCHUL_CRSE_SC_NM': '고등학교',
+        'ORD_SC_NM': '공업계',
+        'DDDEP_NM': '소프트웨어공통과정',
+        'CLASS_NM': '1',
+        'LOAD_DTM': '20210401002948'
+    }, {
+        'ATPT_OFCDC_SC_CODE': 'F10',
+        'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+        'SD_SCHUL_CODE': '7380292',
+        'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+        'AY': '2020',
+        'GRADE': '1',
+        'DGHT_CRSE_SC_NM': '주간',
+        'SCHUL_CRSE_SC_NM': '고등학교',
+        'ORD_SC_NM': '공업계',
+        'DDDEP_NM': '소프트웨어공통과정',
+        'CLASS_NM': '2',
+        'LOAD_DTM': '20210401002948'
+    }, etc ... 
+```
