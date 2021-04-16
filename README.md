@@ -228,4 +228,94 @@ print(schedule_data)
 ]
 ```
 
+### 학교 학과 정보
 
+```python
+school_data : dict = await schoolInfo.search("광주소프트웨어마이스터고등학교")
+major_data : dict = await schoolInfo.major(
+    ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+    SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"]
+)
+print(major_data)
+```
+
+**결과값**
+
+```js
+[
+    {'ATPT_OFCDC_SC_CODE': 'F10',
+    'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+    'SD_SCHUL_CODE': '7380292',
+    'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+    'DGHT_CRSE_SC_NM': '주간',
+    'ORD_SC_NM': '공업계',
+    'DDDEP_NM': 'SW개발과',
+    'LOAD_DTM': '20210401004927'
+    },
+    {'ATPT_OFCDC_SC_CODE': 'F10',
+    'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+    'SD_SCHUL_CODE': '7380292',
+    'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+    'DGHT_CRSE_SC_NM': '주간',
+    'ORD_SC_NM': '공업계',
+    'DDDEP_NM': '소프트웨어공통과정',
+    'LOAD_DTM': '20210401004927'
+    }
+    .
+    .
+    .
+]
+```
+
+### 시간표 정보
+
+```python
+school_data : dict = await schoolInfo.search("광주소프트웨어마이스터고등학교")
+timetable_data : dict = await schoolInfo.timetable(
+    ATPT_OFCDC_SC_CODE=school_data["ATPT_OFCDC_SC_CODE"],
+    SD_SCHUL_CODE=school_data["SD_SCHUL_CODE"]
+)
+print(timetable_data)
+```
+
+**결과값**
+
+```js
+[
+    {
+        'ATPT_OFCDC_SC_CODE': 'F10',
+        'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+        'SD_SCHUL_CODE': '7380292',
+        'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+        'AY': '2020',
+        'SEM': '1',
+        'ALL_TI_YMD': '20200302',
+        'DGHT_CRSE_SC_NM': '주간',
+        'ORD_SC_NM': '공업계',
+        'DDDEP_NM': 'SW개발과',
+        'GRADE': '2',
+        'CLRM_NM': '1',
+        'CLASS_NM': '1',
+        'PERIO': '1',
+        'ITRT_CNTNT': '코로나-19 휴업일',
+        'LOAD_DTM': '20200827165627'
+    }, {
+        'ATPT_OFCDC_SC_CODE': 'F10',
+        'ATPT_OFCDC_SC_NM': '광주광역시교육청',
+        'SD_SCHUL_CODE': '7380292',
+        'SCHUL_NM': '광주소프트웨어마이스터고등학교',
+        'AY': '2020',
+        'SEM': '1',
+        'ALL_TI_YMD': '20200302',
+        'DGHT_CRSE_SC_NM': '주간',
+        'ORD_SC_NM': '공업계',
+        'DDDEP_NM': 'SW개발과',
+        'GRADE': '2',
+        'CLRM_NM': '1',
+        'CLASS_NM': '1',
+        'PERIO': '2',
+        'ITRT_CNTNT': '코로나-19 휴업일',
+        'LOAD_DTM': '20200827165627'
+    } ...
+]
+```
