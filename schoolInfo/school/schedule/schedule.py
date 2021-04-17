@@ -4,6 +4,7 @@ import re
 
 from schoolInfo.util import url_manager, HTMLGetter, except_keyError
 
+
 @except_keyError
 async def schedule(
     ATPT_OFCDC_SC_CODE: str,

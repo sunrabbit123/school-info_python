@@ -2,6 +2,7 @@ import asyncio
 
 import schoolInfo.util as util
 
+
 @util.except_keyError
 async def timetable(
     ATPT_OFCDC_SC_CODE: str,

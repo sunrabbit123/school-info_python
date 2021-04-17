@@ -5,6 +5,7 @@ import re
 
 import schoolInfo.util as util
 
+
 @util.except_keyError
 async def meal(
     ATPT_OFCDC_SC_CODE: str,
