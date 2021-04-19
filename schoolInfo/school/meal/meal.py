@@ -25,5 +25,4 @@ async def meal(
     url: str = util.url_manager(
         type="mealServiceDietInfo", additions=addition, auth_key=auth_key
     ).url
-    meal_data = (await util.HTMLGetter().get_json(url))["mealServiceDietInfo"][1]["row"]
-    return meal_data
+    return (await util.HTMLGetter().get_json(url))["mealServiceDietInfo"][1]["row"]
