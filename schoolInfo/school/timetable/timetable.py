@@ -8,7 +8,14 @@ async def timetable(
     ATPT_OFCDC_SC_CODE: str,
     SD_SCHUL_CODE: str,
     SCHUL_KND_SC_NM: str,
-    auth_key: str = None,
+    AY: str = '',
+    SEM: str = '',
+    ALL_TI_YMD: str = '',
+    GRADE: str = '',
+    CLASS_NM: str = '',
+    TI_FROM_YMD: str = '',
+    TI_TO_YMD: str = '',
+    auth_key: str = '',
 ):
     school_type: dict = {
         "초등학교": "elsTimetable",
@@ -20,6 +27,13 @@ async def timetable(
     addition: list = [
         f"ATPT_OFCDC_SC_CODE={ATPT_OFCDC_SC_CODE}",
         f"SD_SCHUL_CODE={SD_SCHUL_CODE}",
+        f"AY={AY}",
+        f"SEM={SEM}",
+        f"ALL_TI_YMD={ALL_TI_YMD}",
+        f"GRADE={GRADE}",
+        f"CLASS_NM={CLASS_NM}",
+        f"TI_FROM_YMD={TI_FROM_YMD}",
+        f"TI_TO_YMD={TI_TO_YMD}",
     ]
 
     url: str = util.url_manager(
