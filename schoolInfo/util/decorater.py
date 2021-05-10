@@ -1,5 +1,6 @@
 from functools import wraps
 
+
 def except_keyError(func):
     @wraps(func)
     async def wrapper(*args, **kwargs):
