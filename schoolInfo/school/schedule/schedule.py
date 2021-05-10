@@ -9,7 +9,7 @@ from schoolInfo.util import url_manager, HTMLGetter, except_keyError
 async def schedule(
     ATPT_OFCDC_SC_CODE: str,
     SD_SCHUL_CODE: str,
-    this_date : datetime.datetime = None,
+    this_date: datetime.datetime = None,
     start_date: datetime.datetime = None,
     end_date: datetime.datetime = None,
     auth_key: str = None,
@@ -22,7 +22,6 @@ async def schedule(
     except Exception as err:
         print(err)
 
-
     addition = [
         f"ATPT_OFCDC_SC_CODE={ATPT_OFCDC_SC_CODE}",
         f"SD_SCHUL_CODE={SD_SCHUL_CODE}",
@@ -30,7 +29,6 @@ async def schedule(
         f"AA_FROM_YMD={start_date}",
         f"AA_TO_YMD={end_date}",
     ]
-
 
     url: str = url_manager(
         type="SchoolSchedule", additions=addition, auth_key=auth_key
