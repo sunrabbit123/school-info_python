@@ -1,5 +1,5 @@
 import asyncio
-import schoolInfo as schoolInfo
+import schoolInfos as schoolInfo
 
 
 async def main():
